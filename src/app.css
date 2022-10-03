@@ -1,25 +1,52 @@
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* .app-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: pink;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.preact:hover {
-  filter: drop-shadow(0 0 2em #673ab8aa);
-}
-
-.card {
-  padding: 2em;
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #11111d;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+ 
+  
 }
 
-.read-the-docs {
-  color: #888;
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
 }
+
+.sidebar a.active {
+  background-color: #ffffff;
+  color: #474b4c;
+
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #ffffff;
+  color: #474b4c;
+
+}
+
+.sidebar input[type=text] {
+  position: fixed;
+  margin-top: 0;
+  border: 1px solid #ddd;
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  position: absolute;
+
+ 
+
+} */

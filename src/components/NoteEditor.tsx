@@ -41,8 +41,8 @@ export function NoteEditor({ id, onClose }: Props) {
   };
 
   return (
-    <div class="flex flex-col gap-2 p-3">
-      <header class="flex justify-between">
+    <div class="flex flex-1 flex-col gap-2 px-3">
+      <header class="flex items-center justify-between h-12">
         <h1 class="text-xl">{note.title}</h1>
         <button
           onClick={onClose}
@@ -54,7 +54,7 @@ export function NoteEditor({ id, onClose }: Props) {
       </header>
 
       <textarea
-        class="h-48 w-full rounded border p-2 text-sm"
+        class="h-full w-full rounded border p-2 text-sm"
         value={content}
         onChange={(e) => setContent(e.currentTarget.value)}
       ></textarea>

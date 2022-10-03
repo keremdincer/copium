@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { useLiveQuery } from "dexie-react-hooks";
-import { FaRegStickyNote } from "react-icons/fa";
+import { FaRegStickyNote, FaTrashAlt } from "react-icons/fa";
 import { DB } from "../db";
+
 
 interface Props {
   onSelect: (id: number) => void;
@@ -20,24 +21,24 @@ export function NoteList({ onSelect, selected }: Props) {
   };
 
   return (
-    <ul>
+    <ul class="p-2 space-y-2">
       {notes?.map((note) => (
         <li
           onClick={() => onSelect(note.id!)}
           class={clsx(
-            "flex h-10 cursor-pointer items-center gap-2 border-b px-3 text-sm transition",
-            "hover:bg-gray-100",
+            "flex h-10 cursor-pointer items-center gap-2 border-b px-3 text-base transition",
+            "hover:bg-gray-300 text-gray-900 rounded-lg py-2 ",
             selected === note.id && "bg-blue-200 hover:bg-blue-200"
           )}
           key={note.id!}
         >
           <FaRegStickyNote />
-          <span class="flex-1">{note.title}</span>
+          <span class="flex-1 truncate" title={note.title}>{note.title}</span>
           <button
-            class="rounded py-1 px-2 text-sm font-semibold text-red-500 transition hover:bg-red-100 hover:text-red-600"
+            class="rounded py-1 px-2 text-sm font-semibold text-gray-900 transition hover:text-red-600"
             onClick={() => handleDelete(note.id!)}
           >
-            Delete
+            <FaTrashAlt/>
           </button>
         </li>
       ))}
